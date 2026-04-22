@@ -152,7 +152,7 @@ function Register() {
                     </div>
                   </div>
                 </div>
-                
+
 
                 {/* <div className="mb-3">
                   <label className="form-label small fw-semibold text-uppercase text-muted">
