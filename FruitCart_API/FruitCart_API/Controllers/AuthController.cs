@@ -51,14 +51,14 @@ namespace FruitCart_API.Controllers
                         await _roleManager.CreateAsync(new IdentityRole(SD.Role_Customer));
                     }
 
-                    if (model.Role.Equals(SD.Role_Admin, StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        await _userManager.AddToRoleAsync(newUser, SD.Role_Admin);
-                    }
-                    else
-                    {
+                    //if (model.Role.Equals(SD.Role_Admin, StringComparison.CurrentCultureIgnoreCase))
+                    //{
+                    //    await _userManager.AddToRoleAsync(newUser, SD.Role_Admin);
+                    //}
+                    //else
+                    //{
                         await _userManager.AddToRoleAsync(newUser, SD.Role_Customer);
-                    }
+                    //}
 
                         _response.StatusCode = HttpStatusCode.OK;
                     _response.IsSuccess = true;

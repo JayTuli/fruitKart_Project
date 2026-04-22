@@ -22,7 +22,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkS
 
 // here we added the blob before the controller. 
 //builder.Services.AddScoped<IBlobService, BlobService>();  
-//builder.Services.AddScoped<ICloudImages, CloudinaryImages>();
+builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 
 builder.Services.AddControllers();
 

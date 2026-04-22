@@ -10,7 +10,7 @@ function Register() {
     email: "",
     password: "",
     confirmPassword: "",   
-    role: ROLES.CUSTOMER,
+    // role: ROLES.CUSTOMER,
   });
 
   const [registerUser, { isLoading, error }] = useRegisterUserMutation();  // why we using the error then 
@@ -42,7 +42,7 @@ function Register() {
       name: formData.name,
       email: formData.email,
       password: formData.password,
-      role: formData.role,
+      // role: formData.role,
     };
     try {
       const result = await registerUser(registerData).unwrap();
@@ -122,7 +122,7 @@ function Register() {
                   <label htmlFor="email">Email address</label>
                 </div>
 
-                <div className="row g-2 mb-2">
+                <div className="row g-2 mb-3">  
                   <div className="col-sm-6">
                     <div className="form-floating">
                       <input
@@ -152,8 +152,9 @@ function Register() {
                     </div>
                   </div>
                 </div>
+                
 
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <label className="form-label small fw-semibold text-uppercase text-muted">
                     Role
                   </label>
@@ -167,7 +168,7 @@ function Register() {
                     <option value={ROLES.CUSTOMER}>{ROLES.CUSTOMER}</option>
                     <option value={ROLES.ADMIN}>{ROLES.ADMIN}</option>
                   </select>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"
